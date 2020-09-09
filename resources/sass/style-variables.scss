@@ -1,0 +1,333 @@
+$whitecolor:#fff;
+$whitecolorpacity03:rgba(255, 255, 255, 0.3);
+$whitecolorpacity07:rgba(255, 255, 255, 0.7);
+$greycolor:#DCDDE1;
+$greylightcolor:#fafafa;
+$blackcolor:#2F3640;
+$blacklightcolor:#333;
+$redcolor:#ED1C24;
+$redcoloropacity01:rgba(237,28,36,0.9);
+$redcoloropacity03:rgba(237,28,36,0.3);
+$footergreycolor:#999999;
+$servicesgreycolor:#666666;
+
+
+$weightBlackColor:#000;
+$pdfRedColor:#9E0101;
+$aboutWordsColor:#575757;
+$greyBorderColor:#EAEAEA;
+$warningColor:#E90000;
+
+$carrerSectionColor:#E5E5E5;
+
+$lightGreyColor:#f5f5f5;
+$weightBlueColor:#092362;
+$normalBlueColor:#0D296C;
+$socialBlueColor:#051A4F;
+$menuHoverBlue:#3867D6;
+$weightBlueColoropacity03:rgba(3, 7, 60, 0.3);;
+$lightBlueColor:#00c0ff;
+$mainColor:$weightBlueColor;
+$contactFromColor:rgba(87, 87, 87, 0.8);
+
+$solutionGrey:#e5e5e5;
+$footerGrey:#dedede;
+$footerTitleFontColor:#505050;
+$footerFontColor:#979797;
+$pageContentFontColor:#797a7a;
+$videoHeaderColor:#a8a8a8;
+$solutionTitleColor:#09182C;
+@mixin headershadow()
+{
+  background : -moz-linear-gradient(50% 100% 90deg,rgba(0, 0, 0, 0) 1.62%,rgba(0, 0, 0, 0.09) 10.44%,rgba(0, 0, 0, 1) 100%);
+  background : -webkit-linear-gradient(90deg, rgba(0, 0, 0, 0) 1.62%, rgba(0, 0, 0, 0.09) 10.44%, rgba(0, 0, 0, 1) 100%);
+  background : -webkit-gradient(linear,50% 100% ,50% 0% ,color-stop(0.0162,rgba(0, 0, 0, 0) ),color-stop(0.1044,rgba(0, 0, 0, 0.09) ),color-stop(1,rgba(0, 0, 0, 1) ));
+  background : -o-linear-gradient(90deg, rgba(0, 0, 0, 0) 1.62%, rgba(0, 0, 0, 0.09) 10.44%, rgba(0, 0, 0, 1) 100%);
+  background : -ms-linear-gradient(90deg, rgba(0, 0, 0, 0) 1.62%, rgba(0, 0, 0, 0.09) 10.44%, rgba(0, 0, 0, 1) 100%);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#000000' ,GradientType=0)";
+  background : linear-gradient(0deg, rgba(0, 0, 0, 0) 1.62%, rgba(0, 0, 0, 0.09) 10.44%, rgba(0, 0, 0, 1) 100%);
+  opacity : 0.6;
+  filter: alpha(opacity=60) progid:DXImageTransform.Microsoft.Alpha(opacity=60) progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000',endColorstr='#000000' , GradientType=0);
+}
+@mixin transition-method($time){
+  transition: all $time ease-in;
+  -moz-transition: all $time ease-in;
+  -webkit-transition: all $time ease-in;
+  -ms-transition: all $time ease-in;
+}
+
+
+@mixin grayScaleMethod($grayScale){
+  -webkit-filter: grayscale($grayScale);
+  filter: grayscale($grayScale);
+  -moz-filter: grayscale($grayScale);
+  -ms-filter: grayscale($grayScale);
+  -o-filter: grayscale($grayScale);
+}
+
+@mixin triangleLeftUpper()
+{
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 20vh calc(50vw - 12px) 0vh 0;
+  border-color: $weightBlueColor transparent transparent transparent;
+  float: left;
+}
+@mixin triangleRightUpper()
+{
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0px calc(50vw - 12px) 20vh 0vh;
+  border-color:  transparent $weightBlueColor transparent transparent;
+  float: right;
+}
+
+@mixin textShadow() {
+  -webkit-box-shadow: 1px 1px 5px 0px rgba(242,242,242,1);
+  -moz-box-shadow: 1px 1px 5px 0px rgba(242,242,242,1);
+  box-shadow: 1px 1px 5px 0px rgba(242,242,242,1);
+
+}
+
+@mixin boxShadow(){
+  -webkit-box-shadow: 0 2px 2px 1px rgba(41, 41, 41, 0.1);
+  -moz-box-shadow: 0 2px 2px 1px rgba(41, 41, 41, 0.1);
+  box-shadow: 0 2px 2px 1px rgba(41, 41, 41, 0.1);
+}
+
+@mixin doingTriangleLeftUpper()
+{
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 50px 100px 0vh 0;
+  border-color: $weightBlueColor transparent transparent transparent;
+  float: left;
+}
+@mixin doingTriangleRightUpper()
+{
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0px 100px 50px 0;
+  border-color:  transparent $weightBlueColor transparent transparent;
+  float: right;
+}
+
+@mixin doingTriangleLeftBottom()
+{
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0px 100px 50px 0;
+  border-color: transparent transparent $weightBlueColor transparent;
+  float: left;
+}
+@mixin doingTriangleRightBottom()
+{
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 50px 100px 0px 0;
+  border-color: transparent $weightBlueColor transparent transparent;
+  float: right;
+}
+
+
+
+
+
+@mixin triangleLeft()
+{
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0px calc(50vw - 12px) 20vh 0;
+  border-color: transparent transparent $weightBlueColor transparent;
+  float: left;
+}
+@mixin triangleRight()
+{
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 20vh calc(50vw - 12px) 0px 0;
+  border-color: transparent $weightBlueColor transparent transparent;
+  float: right;
+}
+
+
+@mixin triangle(){
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0px 15px 25px 15px;
+  border-color: transparent transparent #ffffff transparent;
+  float: right;
+}
+@mixin scale-method($scaleValue){
+  -webkit-transform: scale($scaleValue);
+  -ms-transform: scale($scaleValue);
+  -moz-transform: scale($scaleValue);
+}
+@mixin rotateMethod($rotateMethod){
+  -webkit-transform: rotate($rotateMethod);
+  -ms-transform: rotate($rotateMethod);
+  -moz-transform: rotate($rotateMethod);
+}
+@mixin circleRed()
+{
+  background-color: $redcolor;
+  height: 10vw;
+  width: 10vw;
+  @include borderradius(100%);
+  border:0.4vw solid $whitecolor;
+}
+
+
+@mixin borderradius($borderval)
+{
+  -webkit-border-radius: $borderval;
+  -moz-border-radius:$borderval ;
+  border-radius:$borderval ;
+
+}
+
+@mixin borderradiusall($bordervaltop,$bordervalright,$bordervalbottom,$bordervalleft)
+{
+  -webkit-border-top-left-radius: $bordervaltop;
+  -moz-border-top-left-radius:$bordervaltop ;
+  border-top-left-radius:$bordervaltop ;
+
+  -webkit-border-top-right-radius: $bordervalright;
+  -moz-border-top-right-radius:$bordervalright ;
+  border-top-right-radius:$bordervalright ;
+
+  -webkit-border-bottom-right-radius: $bordervalbottom;
+  -moz-border-bottom-right-radius:$bordervalbottom ;
+  border-bottom-right-radius:$bordervalbottom ;
+
+  -webkit-border-bottom-left-radius: $bordervalleft;
+  -moz-border-bottom-left-radius:$bordervalleft ;
+  border-bottom-left-radius:$bordervalleft ;
+
+}
+
+
+@mixin triangleRightRed()
+{
+  width: 0;
+  height: 0px;
+  border-style: solid;
+  border-width: 50vh calc(180vw) 0px 0;
+  border-color: transparent $redcolor transparent transparent;
+  float: right;
+}
+@mixin triangleRightWeightBlue()
+{
+  width: 0;
+  height: 0px;
+  border-style: solid;
+  border-width: 50vh calc(180vw) 0px 0;
+  border-color: transparent $weightBlueColor transparent transparent;
+  float: right;
+}
+
+@mixin triangleRightLittleWhite()
+{
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 35vh calc(35vw) 0px 0;
+  border-color: transparent #fff transparent transparent;
+  float: right;
+}
+@mixin triangleRightLittleRed()
+{
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 25vh calc(25vw - 5px) 25vh 0;
+  border-color: transparent $weightBlueColor transparent transparent;
+  float: right;
+}
+
+@mixin footerline()
+{
+  background : -moz-linear-gradient(0% 50% 0deg,rgba(153, 153, 153, 0.2) 0%,rgba(153, 153, 153, 1) 52.97%,rgba(153, 153, 153, 0.2) 100%);
+  background : -webkit-linear-gradient(0deg, rgba(153, 153, 153, 0.2) 0%, rgba(153, 153, 153, 1) 52.97%, rgba(153, 153, 153, 0.2) 100%);
+  background : -webkit-gradient(linear,0% 50% ,100% 50% ,color-stop(0,rgba(153, 153, 153, 0.2) ),color-stop(0.5297,rgba(153, 153, 153, 1) ),color-stop(1,rgba(153, 153, 153, 0.2) ));
+  background : -o-linear-gradient(0deg, rgba(153, 153, 153, 0.2) 0%, rgba(153, 153, 153, 1) 52.97%, rgba(153, 153, 153, 0.2) 100%);
+  background : -ms-linear-gradient(0deg, rgba(153, 153, 153, 0.2) 0%, rgba(153, 153, 153, 1) 52.97%, rgba(153, 153, 153, 0.2) 100%);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#999999', endColorstr='#999999' ,GradientType=0)";
+  background : linear-gradient(90deg, rgba(153, 153, 153, 0.2) 0%, rgba(153, 153, 153, 1) 52.97%, rgba(153, 153, 153, 0.2) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#999999',endColorstr='#999999' , GradientType=1);
+}
+
+@mixin bannertriangle()
+{
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0px 0px 30px 30px;
+  border-color: transparent  transparent transparent $redcolor;
+  float: left;
+}
+
+
+@mixin rotateMoon($rotateTime){
+
+
+  -webkit-animation: rotating $rotateTime linear infinite;
+  -moz-animation: rotating $rotateTime  linear infinite;
+  -ms-animation: rotating $rotateTime linear infinite;
+  -o-animation: rotating $rotateTime  linear infinite;
+  animation: rotating $rotateTime  linear infinite;
+
+
+  @keyframes rotating {
+    from {
+      -ms-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -ms-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+
+}
+
+@mixin moonBack(){
+  background: rgba(38,38,38,1);
+  background: -moz-radial-gradient(center, ellipse cover, rgba(38,38,38,1) 0%, rgba(26,26,26,1) 21%, rgba(20,20,20,1) 55%, rgba(0,0,0,1) 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(38,38,38,1)), color-stop(21%, rgba(26,26,26,1)), color-stop(55%, rgba(20,20,20,1)), color-stop(100%, rgba(0,0,0,1)));
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(38,38,38,1) 0%, rgba(26,26,26,1) 21%, rgba(20,20,20,1) 55%, rgba(0,0,0,1) 100%);
+  background: -o-radial-gradient(center, ellipse cover, rgba(38,38,38,1) 0%, rgba(26,26,26,1) 21%, rgba(20,20,20,1) 55%, rgba(0,0,0,1) 100%);
+  background: -ms-radial-gradient(center, ellipse cover, rgba(38,38,38,1) 0%, rgba(26,26,26,1) 21%, rgba(20,20,20,1) 55%, rgba(0,0,0,1) 100%);
+  background: radial-gradient(ellipse at center, rgba(38,38,38,1) 0%, rgba(26,26,26,1) 21%, rgba(20,20,20,1) 55%, rgba(0,0,0,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#262626', endColorstr='#000000', GradientType=1 );
+}
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+
+@mixin moonFontColor(){
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(22%, #cfc09f), color-stop(24%, #ffd008), color-stop(26%, #cfc09f), color-stop(27%, #cfc09f), color-stop(40%, #f79a07 ), color-stop(78%, #3a2c0f));
+  background: linear-gradient(to bottom, #cfc09f 22%, #634f2c 24%, #cfc09f 26%, #cfc09f 27%, #ffecb3 40%, #f79a07 78%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

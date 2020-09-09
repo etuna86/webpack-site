@@ -1,0 +1,14 @@
+@import 'style-variables';
+@import "~bootstrap/scss/bootstrap";
+@import '~owl.carousel2/src/scss/owl.carousel';
+@import 'fonts';
+@import 'style';
+@import 'responsive';
+@import 'custom';
+
+$fa-font-path: "../fonts/font-awesome"; // destination folder in dist
+//@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+@import '~@fortawesome/fontawesome-free/scss/brands';

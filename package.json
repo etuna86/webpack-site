@@ -1,0 +1,58 @@
+{
+  "name": "accumulate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "watch": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://bitbucket.org/ugurakcil/accumulate.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/etuna86/accumulate-html/issues"
+  },
+  "homepage": "https://github.com/etuna86/accumulate-html#readme",
+  "devDependencies": {
+    "@babel/core": "^7.11.4",
+    "@babel/preset-env": "^7.11.0",
+    "babel-loader": "^8.1.0",
+    "bootstrap": "^4.5.2",
+    "copy-webpack-plugin": "^6.0.3",
+    "css-loader": "^4.2.2",
+    "eslint": "^7.7.0",
+    "eslint-loader": "^4.0.2",
+    "file-loader": "^6.0.0",
+    "mini-css-extract-plugin": "^0.10.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "path": "^0.12.7",
+    "postcss-flexbugs-fixes": "^4.2.1",
+    "postcss-loader": "^3.0.0",
+    "postcss-preset-env": "^6.7.0",
+    "prettier": "^2.1.1",
+    "prettier-webpack-plugin": "^1.2.0",
+    "sass": "^1.26.10",
+    "sass-loader": "^10.0.1",
+    "string-replace-loader": "^2.3.0",
+    "style-loader": "^1.2.1",
+    "stylelint": "^13.6.1",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-webpack-plugin": "^2.1.0",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-fix-style-only-entries": "^0.5.1"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.14.0",
+    "jquery": "^3.5.1",
+    "owl.carousel": "^2.3.4",
+    "owl.carousel2": "^2.2.1",
+    "popper.js": "^1.16.1",
+    "wow": "0.0.6"
+  }
+}

@@ -1,0 +1,30 @@
+
+.marketing-otomation{
+    .platform-header{
+    @extend .standart-header;
+    }
+    .bg-line-left{
+        background-image:url('../images/marketing-otomation/left.png');
+        background-position: center left;
+        background-repeat: no-repeat;
+    }
+    .bg-line-right{
+        background-image:url('../images/marketing-otomation/right.png');
+        background-position: center right;
+        background-repeat: no-repeat;
+    }
+        
+    @media screen and (max-width: 1380px) { 
+        .bg-line-left, .bg-line-right{
+            background-image: none;
+        }
+    }
+  
+    .centered-big-image{
+        text-align:center;
+        margin-bottom:100px;
+        img{
+            max-width:100%;
+        }
+    }
+  }

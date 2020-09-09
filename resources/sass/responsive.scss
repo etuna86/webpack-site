@@ -1,0 +1,552 @@
+
+@media screen and (max-width: 1280px) {
+  header .main-menu ul li:hover div ul li a{
+    padding: 10px;
+  }
+}
+
+@media   (max-width:768px) {
+  .main-menu{
+    display: none;
+  }
+
+  .open{
+    @include transition-method(0.5s);
+    height: 100vh !important;
+    overflow: scroll !important;
+  }
+  .top-header{
+    display: none;
+  }
+  header{
+    margin-top:0px;
+    height: auto;
+    padding: 10px 0px;
+    background: $whitecolor;
+    .logo-section{
+      display: block;
+      width:100%;
+      text-align: center;
+      margin:0px;
+      img{
+        display: inline-block;
+        &.logo-white{
+          display: none;
+        }
+        &.logo-black{
+          display: inline-block !important;
+        }
+      }
+    }
+    .header-menu{
+      display: none;
+    }
+    .mobil-menu-btn{
+      display: block;
+      padding: 0px 15px;
+      margin: 10px 0px;
+      position: absolute;
+      height: 60px;
+      width: 55px;
+      top: -45px;
+      right: 0;
+      i{
+        //color:$weightBlueColor;
+        color: $footerTitleFontColor;
+      }
+      .top-line{
+        margin-top:10px;
+        height: 2px;
+        //background-color:$weightBlueColor;
+        background-color:$footerTitleFontColor;
+        width: 30px;
+        @include transition-method(.5s);
+      }
+      .middle-line{
+        margin-top:7px;
+        height: 2px;
+        background-color:$footerTitleFontColor;
+        width: 24px;
+        @include transition-method(.5s);
+      }
+      .bottom-line{
+        margin-top:7px;
+        height: 2px;
+        background-color:$footerTitleFontColor;
+        width: 30px;
+        @include transition-method(.5s);
+      }
+      &.opened{
+        .top-line{
+          @include transition-method(.5s);
+          @include rotateMethod(45deg);
+        }
+        .middle-line{
+          margin-top:0px;
+          @include transition-method(.5s);
+          display: none;
+        }
+        .bottom-line{
+          margin-top:0px;
+          @include transition-method(.5s);
+          @include rotateMethod(-45deg);
+        }
+      }
+  }
+  .mobile-menu{
+    height: 1px;
+    overflow: hidden;
+    @include transition-method(0.5s);
+    //padding: 0px 15px;
+    display: block;
+  
+    .mobile-submenu{
+      display: none;
+      overflow:hidden;
+      height: 0px;
+      background: $footerGrey;
+      padding-left:15px;
+      @include transition-method(0.5s);
+      &.open-submenu{
+        @include transition-method(0.5s);
+        height: auto;
+        min-height: 100px;
+        visibility: visible;
+        display: block;
+      }
+      li{
+        padding:0px;
+        a{
+          font-size:16px;
+        }
+      }
+    }
+    ul {
+      margin:15px 0px;
+      padding: 10px 0px;
+      border-top: 1px solid $footerTitleFontColor;
+      //border-bottom: 1px solid $whitecolor;
+      li{
+        display: block;
+        height: auto;
+        position: relative;
+        padding-left: 30px;
+        margin: 5px 0px;
+        a{
+          //color:$weightBlueColor;
+          color: $footerTitleFontColor;
+          font-size: 18px;
+        }
+        .triangle-block{
+          @include scale-method(1);
+          @include transition-method(0.2s);
+          //@include rotateMethod(90deg);
+          position: absolute;
+          text-align: center;
+          float: left;
+          left: 0px;
+          top: 0px;
+          height: 25px;
+          width: 25px;
+          line-height: 25px;
+          &.opened-btn{
+            @include transition-method(0.2s);
+            @include rotateMethod(90deg);
+           i{
+
+           }
+          }
+
+          .triangle{
+            @include triangle();
+          }
+          i{
+            font-size: 25px;
+            color:$footerTitleFontColor;
+          }
+        }
+        div{
+          width: 100%;
+          position: relative;
+          left: 0;
+          display: block;
+          @include transition-method(0.2s);
+          &.mobile-submenu{
+            background-color: $footerTitleFontColor;
+        
+            ul{
+              margin:0px !important;
+              li{
+                a{
+                  color:$footerTitleFontColor;
+                }
+              }
+            }
+            @include scale-method(0);
+            height: 0px;
+            overflow: hidden;
+            @include transition-method(0.2s);
+              &.open-submenu{
+                padding:15px 0px;
+                height: auto;
+                @include scale-method(1);
+                @include transition-method(0.2s);
+            }
+          }
+          ul{
+            li{
+              padding-left:15px;
+            }
+          }
+        }
+      }
+    }
+    .social{
+      float: left;
+      width:100%;
+      ul {
+        margin:15px 0px;
+        li{
+          float: left;
+          margin-left:5px;
+          a{
+            color:$weightBlueColor;
+          }
+        }
+      }
+    }
+    .language{
+      float: left;
+      width:100%;
+      ul {
+        margin:15px 0px;
+        li{
+          float: left;
+          margin-left:5px;
+          a{
+            color:$weightBlueColor;
+          }
+        }
+      }
+    }
+  }
+  }
+
+
+.banner-section {
+  height:300px;
+  overflow: visible;
+  .btn-stop{
+    margin-top: -80px;
+  }
+  .btn-play{
+    margin-top: -80px;
+  }
+  .triangle-section-upper{
+    display: none;
+  }
+  .triangle-section{
+    display: none;
+  }
+    .main-slider {
+      height: 300px;
+      .owl-theme {
+        .owl-dots{
+          margin-top: -30px;
+        }
+      }
+      .main-slider-item {
+        img {
+          object-fit: cover;
+          height: 300px;
+        }
+        .main-slider-content{
+          text-align: center;
+          bottom: 0px;
+          width: 100%;
+          left: 0px;
+          top: 0;
+          text-align: center;
+          h3{
+            font-size:16px;
+            b{
+              font-size:16px;
+            }
+          }
+          .slider-btn{
+            height: 35px;
+            line-height: 35px;
+          }
+        }
+      }
+    }
+
+  /**/.owl-nav {
+        display: none;
+    button{
+    }
+  }
+  }
+
+  .activity-areas {
+    #activity-areas {
+      padding: 10px 40px;
+      .owl-next{
+        right: calc(-15px);
+        &:hover{
+          right: calc(-15px);
+        }
+      }
+      .owl-prev{
+        left: calc(-15px);
+        &:hover{
+          left: calc(-15px);
+        }
+      }
+    }
+    .select-broadcast{
+      ul{
+        display: block;
+        li{
+          display: block;
+          width: 100%;
+          margin:10px 0px;
+          border: 0px;
+          @include borderradius(10px);
+          &:first-child{
+            margin:10px 0px;
+            border: 0px;
+            @include borderradius(10px);
+          }
+        }
+      }
+    }
+    .broadcast-section {
+      .broadcast-box{
+        margin:30px 0 0 0;
+      }
+    }
+  }
+  .broadcast-detail-section-bottom {
+    .broadcast-box-bottom {
+      .detail-social {
+        margin:15px 0px;
+        .social-box{
+          display: flex;
+          width:100%;
+          margin:10px 0px;
+          a {
+            flex: 1 1;
+          }
+        }
+      }
+    }
+  }
+  .pdf-section {
+
+    .pdf-btn{
+      display: flex;
+      width:100%;
+      small{
+        flex: 1 1;
+      }
+    }
+  }
+  .homepage-section {
+    .announcement {
+      .announcement-btn{
+        text-align: center;
+        display: block;
+      }
+    }
+    .information-notes {
+      #information-notes{
+        padding: 15px 40px;
+        .owl-next{
+          right: calc(-15px);
+          &:hover{
+            right: calc(-15px);
+          }
+        }
+        .owl-prev{
+          left: calc(-15px);
+          &:hover{
+            left: calc(-15px);
+          }
+        }
+      }
+    }
+  }
+
+  .lawyer-selection-section {
+    .lawyer-selection{
+      display: block;
+      width:100%;
+      select{
+        &:first-child{
+          @include borderradius(10px);
+        }
+        width: 100%;
+        display: block;
+        margin:10px 0px;
+        @include borderradius(10px);
+      }
+      .all-team-select{
+        width: 100%;
+        display: block;
+        margin:10px 0px;
+        @include borderradius(10px);
+      }
+    }
+  }
+
+  .team-section{
+    .lawyers-box{
+      margin:10px 0px;
+      h3{
+        font-size:18px;
+      }
+      span{
+        font-size: 14px;
+      }
+    }
+    .col-md-2{
+      width: 50%;
+    }
+  }
+  .career-form {
+    padding:40px 0px;
+    .from-checkbox{
+      margin: 15px 0px;
+    }
+    input[type=submit]{
+      display: block;
+      width:100%;
+    }
+  }
+  .lawyers-on-subject-section {
+    #lawyers-on-subject{
+      padding: 10px 40px;
+      .owl-next{
+        right: calc(-15px);
+        &:hover{
+          right: calc(-15px);
+        }
+      }
+      .owl-prev{
+        left: calc(-15px);
+        &:hover{
+          left: calc(-15px);
+        }
+      }
+    }
+  }
+  .contact-form{ 
+    .from-checkbox{
+      margin:15px 0px;
+    }
+
+  }
+  .contact-information{
+    margin:15px 0px;
+  }
+  footer {
+    .footer-inside {
+      .footer-contact{
+        border:0px !important;
+      }
+      .footer-menu {
+        margin:20px 0 10px 0;
+        border:0px !important;
+        ul {
+          li{
+            //width: 100%;
+            text-align: left;
+          }
+        }
+      }
+      .map{
+        margin:20px 0 10px 0;
+      }
+    }
+  }
+}
+
+
+@media (max-width:768px) {
+  .main-content{
+    padding: 30px 0px;
+  }
+
+  .main-slider {
+    .slider-content{
+      width:80%;
+      .slider-content-box{
+        h3{
+          font-size:30px;
+          margin: 20px 0 30px;
+        }
+
+        p{
+          margin:15px 0 20px;
+          font-size:16px;
+        }
+      }
+    }
+  }
+
+  .pageheader{
+    .page-header-content{
+      width:80%;
+      .page-header-content-box{
+        h3{
+          font-size:30px;
+          margin: 20px 0 30px;
+        }
+
+        p{
+          margin:15px 0 20px;
+          font-size:16px;
+        }
+      }
+    }
+  }
+
+  .owl-nav{
+    display:none; // OWL CAROUSEL'IN SCROLLLARI - IMAGELAR GÖRÜNMÜYOR
+  }
+
+  .footer-menu{
+    margin-bottom:30px;
+  }
+
+  .marketing-otomation {
+    .centered-big-image {
+      margin:15px;
+    }
+  }
+
+  .home-partners {
+    padding: 30px 0px;
+  }
+
+  .standart-header, 
+  .marketing-otomation .platform-header, 
+  .home-solutions .home-solutions-header, 
+  .home-platform .platform-header, 
+  .pages-header{
+    margin: 10px 0px;
+  }
+
+  .promo-box .promo-img {
+    width: 69px;
+    padding: 14px 18px;
+  }
+}
+
+
+@media   (max-width:350px) {
+  footer .footer-inside .footer-menu ul li a{
+    font-size: 15px;
+  }
+}
